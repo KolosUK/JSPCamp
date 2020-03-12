@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list__tasks {
+            margin-top: 3%;
+        }
+
+        .list__tasks-row {
+            border: 1px solid gray;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .list__tasks-item {
+            margin-right: 3%;
+        }
+
+        .list__tasks-name {
+            width: auto;
+            margin-right: 3%;
+        }
+
+        .list__edit-task,
+        .list__delete-task {
+            border: none;
+        }
+
+        .list__edit-task {
+            background-color: skyblue;
+        }
+
+        .list__delete-task {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list">
+        <div class="list__create-task-section">
+            <input type="text" value="Add task name">
+            <button>Add</button>
+        </div>
+        <hr>
+        <h3>My Tasks</h3>
+        <div class="list__tasks">
+            <div class="list__tasks-row">
+                <input class="list__tasks-item" type="checkbox">
+                <p class="list__tasks-name">Sowa</p>
+                <button class="list__edit-task">Edit</button>
+                <button class="list__delete-task">Delete</button>
+            </div>
+            <div class="list__tasks-row">
+                <input class="list__tasks-item" type="checkbox">
+                <p class="list__tasks-name">Sowa</p>
+            </div>
+            <div class="list__tasks-row">
+                <input class="list__tasks-item" type="checkbox">
+                <p class="list__tasks-name">Sowa</p>
+            </div>
+            <div class="list__tasks-row">
+                <input class="list__tasks-item" type="checkbox">
+                <p class="list__tasks-name">Sowa</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
