@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ServersComponent } from './servers/servers.component';
-import { ServerComponent } from './server/server.component';
+import { NewItemComponent } from './newItem/new-item.component';
 
 @NgModule({
-  declarations: [AppComponent, ServersComponent, ServerComponent],
+  declarations: [AppComponent, ServersComponent, NewItemComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
