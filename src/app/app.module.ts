@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ServersComponent } from './servers/servers.component';
-import { NewItemComponent } from './newItem/new-item.component';
+import { TasksToDoListComponent } from './tasks-to-do-list/tasks-to-do-list.component';
+import { NewItemComponent } from './new-item/new-item.component';
 
 @NgModule({
-  declarations: [AppComponent, ServersComponent, NewItemComponent],
+  declarations: [AppComponent, TasksToDoListComponent, NewItemComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
