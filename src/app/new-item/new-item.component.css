@@ -11,6 +11,10 @@
   border-bottom: 1px solid black;
 }
 
+#new-item-add-value:focus {
+  outline: none;
+}
+
 .add-button {
   color: white;
   background-color: forestgreen;
