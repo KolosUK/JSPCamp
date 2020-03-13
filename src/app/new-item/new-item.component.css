@@ -1,12 +1,19 @@
 .new-item-add {
-  width: 32%;
   display: flex;
   justify-content: space-between;
 }
 
+#new-item-add-value {
+  border: 1px solid black;
+  width: 80%;
+  padding: 10px 0 0 20px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
 .add-button {
   color: white;
-  padding: 0 20px 0 20px;
   background-color: forestgreen;
   border: none;
+  width: 80px;
 }
