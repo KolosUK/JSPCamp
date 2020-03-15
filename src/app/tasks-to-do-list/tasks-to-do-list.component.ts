@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./tasks-to-do-list.component.css']
 })
 export class TasksToDoListComponent {
-  taskId: number = 1;
-  taskName: string = 'Buy baking soda';
   username: string = '';
 }

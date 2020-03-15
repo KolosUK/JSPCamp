@@ -1,40 +1,13 @@
 <div class="tasks__container">
     <h3 class="container-name">Tasks to do</h3>
-    <ul class="tasks__list">
-        <div class="list__item">
-            <div class="list__item_name">
-                <input type="checkbox" name="" id="list__item_value" class="list__item_value--checked">
-                <li class="tasks__list-item">{{ taskName }}</li>
-            </div>
-            <div class="list__item_description">
-                <button class="edit__button">Edit</button>
-                <button class="delete__button">Delete</button>
-            </div>
-        </div>
-        <div class="list__item">
-            <div class="list__item_name">
-                <input type="checkbox" name="" id="list__item_value" class="list__item_value--checked">
-                <li class="tasks__list-item">Mop the floor</li>
-            </div>
-            <div class="list__item_description">
-                <button class="edit__button">Edit</button>
-                <button class="delete__button">Delete</button>
-            </div>
-        </div>
-        <div class="list__item">
-            <div class="list__item_name">
-                <input type="checkbox" name="" id="list__item_value" class="list__item_value--checked">
-                <li class="tasks__list-item">Select sofa in online-catalog</li>
-            </div>
-            <div class="list__item_description">
-                <button class="edit__button">Edit</button>
-                <button class="delete__button">Delete</button>
-            </div>
-        </div>
+    <div class="tasks__list">
+        <list-item></list-item>
+        <app-task-item></app-task-item>
+        <app-task-item></app-task-item>
         <hr>
-        <label>Username</label>
+        <!-- <label>Username</label>
         <input type="text" class="form-control" [(ngModel)]="username">
         <p>{{ username }}</p>
-        <button class="btn btn-primary" [disabled]="username === ''">Reset user</button>
-    </ul>
+        <button class="btn btn-primary">Reset user</button> -->
+    </div>
 </div>

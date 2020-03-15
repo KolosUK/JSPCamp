@@ -1,0 +1,48 @@
+.list__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid white;
+  margin: 10px 0 10px 0;
+}
+
+.list__item_name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tasks__list-item {
+  display: inline;
+  color: black;
+  margin: 0 0 0 10px;
+}
+
+.list__item_description {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+
+#list__item_value {
+  width: 20px;
+  height: 20px;
+}
+
+.edit__button {
+  background-color: lightblue;
+  border: 1px solid lightblue;
+  margin: 0 10px 0 0;
+}
+
+.delete__button {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+}
+
+.edit__button,
+.delete__button {
+  width: 60px;
+}
