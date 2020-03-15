@@ -4,7 +4,7 @@
         <div class="list__item">
             <div class="list__item_name">
                 <input type="checkbox" name="" id="list__item_value" class="list__item_value--checked">
-                <li class="tasks__list-item">Buy baking soda</li>
+                <li class="tasks__list-item">{{ taskName }}</li>
             </div>
             <div class="list__item_description">
                 <button class="edit__button">Edit</button>
@@ -31,5 +31,10 @@
                 <button class="delete__button">Delete</button>
             </div>
         </div>
+        <hr>
+        <label>Username</label>
+        <input type="text" class="form-control" [(ngModel)]="username">
+        <p>{{ username }}</p>
+        <button class="btn btn-primary" [disabled]="username === ''">Reset user</button>
     </ul>
 </div>

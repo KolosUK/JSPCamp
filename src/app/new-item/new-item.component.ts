@@ -6,7 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-item.component.css']
 })
 export class NewItemComponent implements OnInit {
-  constructor() {}
+  allowNewItem = false;
+  itemCreationStatus = 'No item was created';
+  serverName = 'Test task';
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewItem = true;
+    }, 2000);
+  }
 
   ngOnInit(): void {}
+
+  onCreateButtonClick() {
+    this.itemCreationStatus = `Item was created. Name is ' + this.serverName'`;
+  }
+
+  onUpdateItemName(event: any) {
+    this.serverName = (<HTMLInputElement>event.target).value;
+  }
 }
