@@ -1,0 +1,24 @@
+<div class="d-flex  flex-column h-100 align-items-center justify-content-center">
+  <div class="col-6">
+    <label class="align"> Enter some text </label>
+  <div>
+    <input class="align" type="text" name="todo" [(ngModel)]="todo" placeholder="text">
+    <button class="btn btn-primary align" 
+    [disabled]= "!todo" 
+    (click)="addToList()" 
+    type="button">{{btnAdd}}</button>
+  </div>
+  <div class ="border rounded ">
+    <ul style="list-style-type:none;">
+      <li *ngFor="let item of list; let i=index">
+       <app-todocomponent 
+       [items]="item" 
+       (edited)="edited(i)" 
+       (deleted)="deleted(i)"
+       (check)="checking(i)"> </app-todocomponent> 
+      </li>
+    </ul>
+  </div>
+  </div>  
+  
+  </div>
