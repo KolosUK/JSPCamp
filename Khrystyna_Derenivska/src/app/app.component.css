@@ -1,0 +1,21 @@
+.new-item-add {
+  display: flex;
+  justify-content: space-between;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="text"] {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.add-button {
+  color: white;
+  background-color: forestgreen;
+  border: none;
+  width: 80px;
+}

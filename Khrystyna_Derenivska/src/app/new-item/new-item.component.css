@@ -1,0 +1,23 @@
+.new-item-add {
+  display: flex;
+  justify-content: space-between;
+}
+
+#new-item-add-value {
+  border: 1px solid black;
+  width: 80%;
+  padding: 10px 0 0 20px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+#new-item-add-value:focus {
+  outline: none;
+}
+
+.add-button {
+  color: white;
+  background-color: forestgreen;
+  border: none;
+  width: 80px;
+}
