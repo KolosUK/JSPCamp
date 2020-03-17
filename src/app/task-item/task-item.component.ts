@@ -25,4 +25,8 @@ export class TaskItemComponent {
   onDeleteClick() {
     this.deleteItem.emit(this.task.id);
   }
+
+  onDoneChange() {
+    this.task.isDone = !this.task.isDone;
+  }
 }

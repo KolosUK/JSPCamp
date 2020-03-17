@@ -30,7 +30,7 @@
   height: 20px;
 }
 
-.list__item_value--checked {
+.task__done .list__item_name {
   text-decoration: line-through;
 }
 
