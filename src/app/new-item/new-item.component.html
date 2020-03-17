@@ -1,6 +1,5 @@
 <div class="new-item-add">
     <input type="text" name="task name" id="new-item-add-value" (input)="onUpdateItemName($event)">
-    <!-- <input type="text" class="output" >{{ itemCreationStatus }} -->
-    <!-- <p>{{ serverName }}</p> -->
-    <button class="add-button" [disabled]="allowNewItem" (click)="onCreateButtonClick()">Add</button>
+    <button class="add-button" (click)="onCreateButtonClick()">Add</button>
+    <app-task-item *ngIf="itemCreated"></app-task-item>
 </div>

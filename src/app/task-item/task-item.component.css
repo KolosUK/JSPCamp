@@ -25,9 +25,17 @@
   align-items: center;
 }
 
-#list__item_value {
+.list__item_value {
   width: 20px;
   height: 20px;
+}
+
+.list__item_value--checked {
+  text-decoration: line-through;
+}
+
+.list__item_description--disabled {
+  display: none;
 }
 
 .edit__button {

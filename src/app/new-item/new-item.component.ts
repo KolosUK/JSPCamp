@@ -9,6 +9,7 @@ export class NewItemComponent implements OnInit {
   allowNewItem = false;
   itemCreationStatus = 'No item was created';
   serverName = 'Test task';
+  itemCreated = false;
 
   constructor() {
     setTimeout(() => {
@@ -19,6 +20,7 @@ export class NewItemComponent implements OnInit {
   ngOnInit(): void {}
 
   onCreateButtonClick() {
+    this.itemCreated = true;
     this.itemCreationStatus = `Item was created. Name is ' + this.serverName'`;
   }
 

@@ -8,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class TaskItemComponent implements OnInit {
   taskId: number = 1;
   taskName: string = 'Buy baking soda';
-  username: string = '';
+  // username: string = '';
+  checkStatus: string = 'checked';
 
   constructor() {}
+
+  // onCheckboxClick() {
+  //   return this.checkStatus === 'checked' ? 'line-through' : 'none';
+  // }
+
+  // getTextDecoration() {
+  //   this.taskIsDone = true;
+  //   return;
+  // }
 
   ngOnInit(): void {}
 }
