@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Task from './task';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,6 @@ export class AppComponent {
   taskName: string;
 
   onCreateButtonClick() {
-    // this.tasks.push('this.taskName');
-    this.tasks.push(this.taskName);
+    this.tasks.push(new Task(this.taskName));
   }
 }
