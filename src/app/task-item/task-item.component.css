@@ -39,20 +39,22 @@
 }
 
 .button__edit {
-  background-color: lightblue;
-  border-color: lightblue;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
   margin: 0 10px 0 0;
 }
 
 .button__save {
-  background-color: lightgreen;
-  border-color: lightgreen;
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
   margin: 0 10px 0 0;
 }
 
 .button__delete {
-  background-color: red;
-  border-color: red;
+  background-color: #dc3545;
+  border-color: #dc3545;
   color: white;
 }
 
@@ -60,4 +62,5 @@
   width: 60px;
   border-width: 1px;
   border-style: solid;
+  border-radius: 5px;
 }

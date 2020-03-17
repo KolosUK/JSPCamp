@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import Task from '../task';
 
 @Component({
@@ -8,6 +8,7 @@ import Task from '../task';
 })
 export class TaskItemComponent {
   @Input() task: Task;
+  @Output() deleteItem = new EventEmitter<number>();
   isEditMode: boolean = false;
   editedTaskName: string;
 
@@ -19,5 +20,9 @@ export class TaskItemComponent {
   onSaveClick() {
     this.task.name = this.editedTaskName;
     this.isEditMode = false;
+  }
+
+  onDeleteClick() {
+    this.deleteItem.emit(this.task.id);
   }
 }
