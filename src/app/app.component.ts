@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Khris';
+  tasks = [];
+  taskName: string;
+
+  onCreateButtonClick() {
+    // this.tasks.push('this.taskName');
+    this.tasks.push(this.taskName);
+  }
 }

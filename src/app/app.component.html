@@ -1,4 +1,9 @@
-<h3>Add new task</h3>
-<app-new-item-add #appChild></app-new-item-add>
+<!-- <app-new-item-add #appChild></app-new-item-add> -->
+<div class="new-item-add">
+    <label for="new-task-name">Add new task</label>
+    <input type="text" name="task name" id="new-task-name" [(ngModel)]='taskName'>
+    <button class="add-button" (click)="onCreateButtonClick()">Add</button>
+</div>
+
 <hr>
-<app-tasks-to-do-list></app-tasks-to-do-list>
+<p *ngFor="let task of tasks">{{task}}</p>
