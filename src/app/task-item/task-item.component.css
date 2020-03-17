@@ -38,19 +38,26 @@
   display: none;
 }
 
-.edit__button {
+.button__edit {
   background-color: lightblue;
-  border: 1px solid lightblue;
+  border-color: lightblue;
   margin: 0 10px 0 0;
 }
 
-.delete__button {
+.button__save {
+  background-color: lightgreen;
+  border-color: lightgreen;
+  margin: 0 10px 0 0;
+}
+
+.button__delete {
   background-color: red;
-  border: 1px solid red;
+  border-color: red;
   color: white;
 }
 
-.edit__button,
-.delete__button {
+.button {
   width: 60px;
+  border-width: 1px;
+  border-style: solid;
 }
