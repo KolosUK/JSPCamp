@@ -1,25 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { element } from 'protractor';
+import TodoItem from './todoItem'
 
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.css']
 })
+
 export class TodoComponent implements OnInit {
 
-  allowAddingItem = false;
-  todo = [{id: 0, label: "Drink coffee", done: false, editing: false},{id: 1, label: "Sleep", done: false, editing: false}, {id: 2, label: "Do TODO list", done: false, editing: false}];
+  allowAddingItem = true;
+  
+ // todo = [{id: 0, label: "Drink coffee", done: false, editing: false},{id: 1, label: "Sleep", done: false, editing: false}, {id: 2, label: "Do TODO list", done: false, editing: false}];
+  todo: TodoItem[] = new Array();
   nextId = 3;
-  constructor() { }
+  constructor() { 
+    this.todo.push(new TodoItem(0, "Drink coffee"));
+    this.todo.push(new TodoItem(1, "Sleep"));
+    this.todo.push(new TodoItem(2, "Do Todo-list"));
+  }
 
   ngOnInit(): void {
 
   }
 
   onUpdateInput(event: Event){
-    if((<HTMLInputElement>event.target).value==='') this.allowAddingItem = false;
-    else this.allowAddingItem = true;
+    if((<HTMLInputElement>event.target).value==='') {
+      this.allowAddingItem = true;
+    }else {
+      this.allowAddingItem = false;
+    }
   }
 
   onDone(id: number){
@@ -52,14 +62,7 @@ export class TodoComponent implements OnInit {
   }
 
   addTodo(newTodoLabel){
-
-    let newTodoItem = {
-      id:this.nextId,
-      label: newTodoLabel,
-      done: false, 
-      editing: false
-    };
-    this.todo.push(newTodoItem);
+    this.todo.push(new TodoItem(this.nextId, newTodoLabel));
     this.nextId++;
   }
 }
