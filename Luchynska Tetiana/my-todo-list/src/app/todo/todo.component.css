@@ -1,0 +1,27 @@
+.doned{
+text-decoration: line-through;
+}
+
+button{
+    margin-left: 5px;
+}
+
+li{
+    margin-top: 15px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.todo-text,  .but{
+    width: 50%;
+}
+
