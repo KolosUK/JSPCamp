@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { TodocomponentComponent } from './todocomponent/todocomponent.component';
 import { TodolistsComponent } from './todolists/todolists.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

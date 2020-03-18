@@ -1,6 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-
 @Component({
   selector: 'app-todocomponent',
   templateUrl: './todocomponent.component.html',
@@ -8,9 +7,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TodocomponentComponent {
   @Input() items: string;
-  @Output() editItem = new EventEmitter();
-  @Output() delItem = new EventEmitter();
-  @Output() checkItem = new EventEmitter();
+  @Output() editItem = new EventEmitter<any>();
+  @Output() delItem = new EventEmitter<any>();
+  @Output() checkItem = new EventEmitter<any>();
 
   isCheck = false;
 
