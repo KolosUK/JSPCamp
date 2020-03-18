@@ -1,0 +1,18 @@
+<div class="d-flex  flex-column h-100 align-items-center justify-content-center">
+  <div>
+    <label class="align"> Введіть таск</label> 
+  </div> 
+  <div>
+    <button class="btn btn-success" [disabled]= "!inputText" (click)="addToList()" type="button">{{isEdit ? 'Save' : 'Add'}}</button>
+  </div>
+  <div>
+    <input class="align" type="text" name="todo" [(ngModel)]="inputText" placeholder="Введіть текст">
+  </div>
+  <div>
+    <ul>
+      <li *ngFor="let item of list; let i=index">
+       <app-todocomponent [items]="item" (editItem)="itemEdit(i)" (delItem)="itemDel(i)"(checkItem)="itemCheck(i)"></app-todocomponent> 
+      </li>
+    </ul>
+  </div>
+</div>
