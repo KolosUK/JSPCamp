@@ -11,9 +11,9 @@ export class TodoComponent implements OnInit {
 
   allowAddingItem = true;
   
- // todo = [{id: 0, label: "Drink coffee", done: false, editing: false},{id: 1, label: "Sleep", done: false, editing: false}, {id: 2, label: "Do TODO list", done: false, editing: false}];
   todo: TodoItem[] = new Array();
   nextId = 3;
+  newTodoItem = '';
   constructor() { 
     this.todo.push(new TodoItem(0, "Drink coffee"));
     this.todo.push(new TodoItem(1, "Sleep"));
@@ -64,5 +64,6 @@ export class TodoComponent implements OnInit {
   addTodo(newTodoLabel){
     this.todo.push(new TodoItem(this.nextId, newTodoLabel));
     this.nextId++;
+    this.newTodoItem = '';
   }
 }
