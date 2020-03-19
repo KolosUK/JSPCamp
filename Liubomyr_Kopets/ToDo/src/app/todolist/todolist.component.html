@@ -11,7 +11,7 @@
   <div>
     <ul>
       <li *ngFor="let item of list; let i=index">
-       <app-todocomponent [items]="item" (editItem)="itemEdit(i)" (delItem)="itemDel(i)"(checkItem)="itemCheck(i)"></app-todocomponent> 
+       <app-itemcomp [items]="item" (editItem)="itemEdit(i)" (delItem)="itemDel(i)"(checkItem)="itemCheck(i)"></app-itemcomp> 
       </li>
     </ul>
   </div>

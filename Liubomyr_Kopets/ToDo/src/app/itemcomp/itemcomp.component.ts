@@ -1,11 +1,11 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-todocomponent',
-  templateUrl: './todocomponent.component.html',
-  styleUrls: ['./todocomponent.component.scss']
+  selector: 'app-itemcomp',
+  templateUrl: './itemcomp.component.html',
+  styleUrls: ['./itemcomp.component.scss']
 })
-export class TodocomponentComponent {
+export class ItemcompComponent implements OnInit {
   @Input() items: string;
   @Output() editItem = new EventEmitter<any>();
   @Output() delItem = new EventEmitter<any>();
@@ -29,5 +29,10 @@ export class TodocomponentComponent {
         this.checkItem.emit();
       }
     }
-}
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
