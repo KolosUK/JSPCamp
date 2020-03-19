@@ -7,9 +7,9 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class ItemcompComponent implements OnInit {
   @Input() items: string;
-  @Output() editItem = new EventEmitter<any>();
-  @Output() delItem = new EventEmitter<any>();
-  @Output() checkItem = new EventEmitter<any>();
+  @Output() editItem = new EventEmitter<void>();
+  @Output() delItem = new EventEmitter<void>();
+  @Output() checkItem = new EventEmitter<void>();
 
   isCheck = false;
 
