@@ -1,9 +1,9 @@
-.new-item-add {
+.task-to-add {
   display: flex;
   justify-content: space-between;
 }
 
-#new-item-add-value {
+#task-to-add__name {
   border: 1px solid black;
   width: 80%;
   padding: 10px 0 0 20px;
@@ -11,7 +11,7 @@
   border-bottom: 1px solid black;
 }
 
-#new-item-add-value:focus {
+#task-to-add__name:focus {
   outline: none;
 }
 
