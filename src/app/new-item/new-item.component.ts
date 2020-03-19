@@ -11,11 +11,7 @@ export class NewItemComponent implements OnInit {
   serverName = 'Test task';
   itemCreated = false;
 
-  constructor() {
-    setTimeout(() => {
-      this.allowNewItem = true;
-    }, 2000);
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 
