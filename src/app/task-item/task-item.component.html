@@ -4,8 +4,8 @@
         <input type="text" id="edit-task-name" [(ngModel)]='editedTaskName'>
     </ng-template>
     <ng-template #showTask>
-        <div class="list__item_name" [ngClass]=" ">
-            <input type="checkbox" id="list__item-1_value" class="list__item_value" (change)="onDoneChange()">
+        <div class="list__item_name">
+            <input type="checkbox" class="list__item_value" (change)="onDoneChange()" [disabled]="task.isDone">
             <label for="list__item-1_value">{{task.name}}</label>
         </div>
     </ng-template>
@@ -14,16 +14,13 @@
     <div class="list__item_description">
         <div *ngIf="isEditMode; then saveButton else editButton"></div>
         <ng-template #editButton>
-            <button class="button button__edit" (click)="onEditClick()"
-                [attr.disabled]="task.isDone ? '' : null">Edit</button>
+            <button class="button button__edit" (click)="onEditClick()" [disabled]="task.isDone">Edit</button>
 
         </ng-template>
         <ng-template #saveButton>
-            <button class="button button__save" (click)="onSaveClick()"
-                [attr.disabled]="task.isDone ? '' : null">Save</button>
+            <button class=" button button__save" (click)="onSaveClick()" [disabled]="task.isDone">Save</button>
 
         </ng-template>
-        <button class="button button__delete" (click)="onDeleteClick()"
-            [attr.disabled]="task.isDone ? '' : null">Delete</button>
+        <button class="button button__delete" (click)="onDeleteClick()" [disabled]="task.isDone">Delete</button>
     </div>
 </div>

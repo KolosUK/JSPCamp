@@ -1,6 +1,7 @@
 .new-item-add {
   display: flex;
   justify-content: space-between;
+  margin: 20px 0 0 0;
 }
 
 input:focus {
