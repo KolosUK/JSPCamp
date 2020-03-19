@@ -6,9 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-item.component.css']
 })
 export class NewItemComponent implements OnInit {
-  // allowNewItem = false;
-  // itemCreationStatus = 'No item was created';
-  // serverName = 'Test task';
   itemCreated = false;
 
   constructor() {}
@@ -17,10 +14,5 @@ export class NewItemComponent implements OnInit {
 
   onCreateButtonClick() {
     this.itemCreated = true;
-    // this.itemCreationStatus = `Item was created. Name is ${this.serverName}`;
   }
-
-  // onUpdateItemName(event: MouseEvent) {
-  //   this.serverName = (<HTMLInputElement>event.target).value;
-  // }
 }
