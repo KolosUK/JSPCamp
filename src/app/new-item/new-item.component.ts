@@ -17,10 +17,10 @@ export class NewItemComponent implements OnInit {
 
   onCreateButtonClick() {
     this.itemCreated = true;
-    this.itemCreationStatus = `Item was created. Name is ' + this.serverName'`;
+    this.itemCreationStatus = `Item was created. Name is ${this.serverName}`;
   }
 
-  onUpdateItemName(event: any) {
+  onUpdateItemName(event: MouseEvent) {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
 }
