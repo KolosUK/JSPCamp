@@ -10,9 +10,7 @@ export class AppComponent {
   tasks: Task[] = new Array();
   taskName: string;
 
-  constructor() {
-    this.tasks.push(new Task(0, 'task to do'));
-  }
+  constructor() {}
 
   onCreateButtonClick() {
     this.tasks.push(new Task(this.tasks.length, this.taskName));
