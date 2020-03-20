@@ -1,9 +1,31 @@
-.new-item-add {
+.task-to-add {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0 0 0;
   flex-direction: column;
 }
+
+.task-to-add__label {
+  font-size: 20px;
+  font-weight: 400;
+}
+/* 
+#task-to-add__name {
+  border: 1px solid black;
+  padding: 10px 0 0 20px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+#task-to-add__name:focus {
+  outline: none;
+}
+
+.add-button {
+  color: white;
+  background-color: forestgreen;
+  border: none;
+  width: 80px;
+} */
 
 input:focus {
   outline: none;
@@ -17,8 +39,14 @@ input[type="text"] {
 
 .add-button {
   margin: 20px 0 0 0;
+  padding: 4px 0;
   color: white;
   background-color: forestgreen;
   border: none;
   width: 80px;
+  border-radius: 4px;
+}
+
+.task-to-add__notification {
+  color: red;
 }

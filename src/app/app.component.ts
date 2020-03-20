@@ -9,6 +9,7 @@ import Task from './task';
 export class AppComponent {
   tasks: Task[] = new Array();
   taskName: string;
+  errorEmptyField: string = 'You have to name your task';
 
   constructor() {}
 
