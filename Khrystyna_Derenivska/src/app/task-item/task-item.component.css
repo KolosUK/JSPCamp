@@ -1,4 +1,4 @@
-.list__item {
+.list-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -7,7 +7,7 @@
   margin: 10px 0 10px 0;
 }
 
-.list__item_name {
+.list-item__name {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -19,22 +19,22 @@
   margin: 0 0 0 10px;
 }
 
-.list__item_description {
+.list-item__actions {
   display: flex;
   justify-content: stretch;
   align-items: center;
 }
 
-.list__item_value {
+.list-item__checkbox {
   width: 20px;
   height: 20px;
 }
 
-.task__done .list__item_name {
+.task__done .list-item__name {
   text-decoration: line-through;
 }
 
-.list__item_description--disabled {
+.list-item__actions--disabled {
   display: none;
 }
 
@@ -63,4 +63,8 @@
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
+}
+
+.button--inactive {
+  opacity: 0.3;
 }

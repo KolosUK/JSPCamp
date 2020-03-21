@@ -1,6 +1,12 @@
-.new-item-add {
+.task-to-add {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+}
+
+.task-to-add__label {
+  font-size: 20px;
+  font-weight: 400;
 }
 
 input:focus {
@@ -14,8 +20,15 @@ input[type="text"] {
 }
 
 .add-button {
+  margin: 20px 0 0 0;
+  padding: 4px 0;
   color: white;
   background-color: forestgreen;
   border: none;
   width: 80px;
+  border-radius: 4px;
+}
+
+.task-to-add__notification {
+  color: red;
 }
