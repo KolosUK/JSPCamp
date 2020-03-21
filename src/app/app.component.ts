@@ -26,6 +26,7 @@ export class AppComponent {
     this.validateInput();
     if (!this.isError) {
       this.tasks.push(new Task(this.tasks.length, this.taskName));
+      this.taskName = '';
     }
   }
 
