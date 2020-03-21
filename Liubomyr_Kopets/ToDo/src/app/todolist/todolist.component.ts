@@ -9,7 +9,6 @@ export class TodolistComponent {
 
   title = 'todo';
   inputText: string;
-  text: string;
   itemsList: string[] = [];
   isEdit = false;
   indexEdit: number;
