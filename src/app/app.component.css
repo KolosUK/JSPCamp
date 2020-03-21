@@ -8,24 +8,6 @@
   font-size: 20px;
   font-weight: 400;
 }
-/* 
-#task-to-add__name {
-  border: 1px solid black;
-  padding: 10px 0 0 20px;
-  border: none;
-  border-bottom: 1px solid black;
-}
-
-#task-to-add__name:focus {
-  outline: none;
-}
-
-.add-button {
-  color: white;
-  background-color: forestgreen;
-  border: none;
-  width: 80px;
-} */
 
 input:focus {
   outline: none;
