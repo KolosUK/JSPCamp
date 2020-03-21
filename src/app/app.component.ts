@@ -15,7 +15,6 @@ export class AppComponent {
 
   onCreateButtonClick() {
     this.tasks.push(new Task(this.tasks.length, this.taskName));
-    this.taskName = '';
   }
 
   onDelete(id: number) {
