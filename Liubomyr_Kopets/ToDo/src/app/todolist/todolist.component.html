@@ -10,8 +10,8 @@
   </div>
   <div>
     <ul>
-      <li *ngFor="let item of list; let i=index">
-       <app-itemcomp [items]="item" (editItem)="itemEdit(i)" (delItem)="itemDel(i)"(checkItem)="itemCheck(i)"></app-itemcomp> 
+      <li *ngFor="let item of itemsList; let itemIndex=index">
+       <app-itemcomp [item]="item" (editItem)="itemEdit(itemIndex)" (delItem)="itemDel(itemIndex)"(checkItem)="itemCheck(itemIndex)"></app-itemcomp> 
       </li>
     </ul>
   </div>

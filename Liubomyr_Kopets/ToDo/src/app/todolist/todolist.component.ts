@@ -10,27 +10,27 @@ export class TodolistComponent {
   title = 'todo';
   inputText: string;
   text: string;
-  list: string[] = [];
+  itemsList: string[] = [];
   isEdit = false;
   indexEdit: number;
   addToList() {
     if (!this.isEdit) {
-      this.list.push(this.inputText) ;
+      this.itemsList.push(this.inputText) ;
       this.inputText = '';
     } else {
-    this.list[this.indexEdit] = this.inputText;
+    this.itemsList[this.indexEdit] = this.inputText;
     this.isEdit = false;
     this.inputText = '';
   }
 }
 
   itemEdit(index: number) {
-    this.inputText = this.list[index];
+    this.inputText = this.itemsList[index];
     this.isEdit = true;
     this.indexEdit = index;
   }
   itemDel(index: number) {
-    this.list.splice(index, 1);
+    this.itemsList.splice(index, 1);
     this.itemCheck(index);
   }
   itemCheck(index: number) {

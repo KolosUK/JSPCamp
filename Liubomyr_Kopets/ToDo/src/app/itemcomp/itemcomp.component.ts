@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
   styleUrls: ['./itemcomp.component.scss']
 })
 export class ItemcompComponent implements OnInit {
-  @Input() items: string;
+  @Input() item: string;
   @Output() editItem = new EventEmitter<void>();
   @Output() delItem = new EventEmitter<void>();
   @Output() checkItem = new EventEmitter<void>();
