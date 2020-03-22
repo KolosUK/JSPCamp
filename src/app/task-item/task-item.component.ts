@@ -9,7 +9,7 @@ import Task from '../task';
 export class TaskItemComponent {
   @Input() task: Task;
   @Output() deleteItem = new EventEmitter<number>();
-  isEditMode: boolean = false;
+  isEditMode: boolean;
   editedTaskName: string;
 
   onEditClick() {

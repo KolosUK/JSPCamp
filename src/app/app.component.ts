@@ -9,10 +9,8 @@ import Task from './task';
 export class AppComponent {
   tasks: Task[] = new Array();
   taskName: string;
-  isError: boolean = false;
-  errorEmptyField: string = 'You have to name your task';
-
-  constructor() {}
+  isError = false;
+  errorEmptyField = 'You have to name your task';
 
   validateInput() {
     if (!this.taskName) {
@@ -37,6 +35,6 @@ export class AppComponent {
   }
 
   onDelete(id: number) {
-    this.tasks = this.tasks.filter(el => el.id != id);
+    this.tasks = this.tasks.filter(el => el.id !== id);
   }
 }
