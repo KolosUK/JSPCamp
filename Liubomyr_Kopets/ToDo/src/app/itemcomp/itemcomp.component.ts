@@ -13,11 +13,11 @@ export class ItemcompComponent {
 
   isCheck = false;
 
-  isDeleted() {
+  itemDelete() {
     this.delItem.emit();
   }
 
-  isEdited() {
+  itemEdit() {
     this.editItem.emit();
   }
 
