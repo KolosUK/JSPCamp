@@ -1,6 +1,6 @@
-<div class="design1">
+<div class="flinch">
     <input type="checkbox"  (change)="checked()">
-    <span [class.line]="isGood">{{ items }}</span>
-    <button [disabled]="isGood" (click)="isEdited()" class = "m-1 p-1 btn btn-outline-primary"> Edit </button>
-    <button [disabled]="isGood" (click)="isDeleted()" class = "m-1 p-1 btn btn-outline-primary"> Delete </button>
+    <span [class.line]="onGood">{{ items }}</span>
+    <button [disabled]="onGood" (click)="isEdited()" class = "m-1 p-1 btn btn-outline-primary"> Edit </button>
+    <button [disabled]="onGood" (click)="isDeleted()" class = "m-1 p-1 btn btn-outline-primary"> Delete </button>
 </div>
