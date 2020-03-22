@@ -12,7 +12,7 @@
           (click)="editTodo()">Edit</button>
           <button class="btn btn-primary"
           [disabled]="todoItem.isEditing" 
-          (click)="ChangeDoneStatus()">Done</button>
+          (click)="changeDoneStatus()">Done</button>
           <button class="btn btn-primary" 
           [disabled]="todoItem.isDone || todoItem.isEditing "
           (click)="deleteTodo()">Delete</button>

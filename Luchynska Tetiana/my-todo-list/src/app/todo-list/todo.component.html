@@ -10,9 +10,12 @@
               type="text" #newTask
               class="form-control"
               [(ngModel)]='newTodoItem'
-              (input)="UpdateInput($event)">
+              (input)="updateInput($event)">
              <div *ngFor="let todoTask of todoList">
-                 <app-todo-task [todoItem]="todoTask" (isDeletedTodo)="deleteTodo(todoTask.id)" (isChangedDone)="changeDoneStatus(todoTask.id)" (isEditedTodo)="editTodo(todoTask.id, $event)"></app-todo-task>
+                 <app-todo-task [todoItem]="todoTask" 
+                 (isDeletedTodo)="deleteTodo(todoTask.id)" 
+                 (isChangedDone)="changeDoneStatus(todoTask.id)" 
+                 (isEditedTodo)="editTodo(todoTask.id, $event)"></app-todo-task>
              </div>
         </div>
     </div>

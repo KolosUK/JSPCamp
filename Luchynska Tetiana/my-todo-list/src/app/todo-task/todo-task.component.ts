@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
-import TodoItem from '../todo-list/todoItem'
+import TodoItem from '../todo-list/todoItem';
 
 
 @Component({
@@ -7,22 +7,22 @@ import TodoItem from '../todo-list/todoItem'
   templateUrl: './todo-task.component.html',
   styleUrls: ['./todo-task.component.css']
 })
-export class TodoTaskComponent{
+export class TodoTaskComponent {
     @Input() todoItem: TodoItem;
     @Output() isEditedTodo = new EventEmitter<string>();
     @Output() isChangedDone = new EventEmitter<void>();
     @Output() isDeletedTodo = new EventEmitter<void>();
 
-    editTodo(){
+    editTodo() {
       this.todoItem.isEditing = true;
     }
 
-    doneEdit(event: Event){
+    doneEdit(event: Event) {
       this.isEditedTodo.emit((<HTMLInputElement>event.target).value);
       this.todoItem.isEditing = false;
     }
 
-    ChangeDoneStatus() {
+    changeDoneStatus() {
        this.isChangedDone.emit();
     }
 
