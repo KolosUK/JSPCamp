@@ -12,15 +12,12 @@ export class ItemcompComponent {
   @Output() checkItem = new EventEmitter<void>();
 
   isCheck = false;
-
   itemDelete() {
     this.delItem.emit();
   }
-
   itemEdit() {
     this.editItem.emit();
   }
-
   checked() {
     if (this.isCheck) {
       this.isCheck = false;

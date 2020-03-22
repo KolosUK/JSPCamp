@@ -6,7 +6,7 @@
     <button class="btn btn-success" [disabled]= "!inputText" (click)="addToList()" type="button">{{isEdit ? 'Save' : 'Add'}}</button>
   </div>
   <div>
-    <input class="align" type="text" name="todo" [(ngModel)]="inputText" placeholder="Введіть текст">
+    <input type="text" [(ngModel)]="inputText" placeholder="Введіть текст">
   </div>
   <div>
     <ul>
