@@ -37,8 +37,6 @@ export class AppComponent {
   }
 
   onDelete(id: number) {
-    console.log('delete item', id);
     this.tasks = this.tasks.filter(el => el.id != id);
-    console.log('all tasks', this.tasks);
   }
 }
