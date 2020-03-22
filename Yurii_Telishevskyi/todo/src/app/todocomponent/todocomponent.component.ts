@@ -7,9 +7,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TodocomponentComponent {
   @Input() item: string;
-  @Output() editItem = new EventEmitter();
-  @Output() deleteItem = new EventEmitter();
-  @Output() check = new EventEmitter();
+  @Output() editItem = new EventEmitter<void>();
+  @Output() deleteItem = new EventEmitter<void>();
+  @Output() check = new EventEmitter<void>();
 
   isChecked = false;
 
