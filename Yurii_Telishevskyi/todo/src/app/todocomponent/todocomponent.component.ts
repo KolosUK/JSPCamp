@@ -6,26 +6,26 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./todocomponent.component.scss']
 })
 export class TodocomponentComponent {
-  @Input() items: string;
+  @Input() item: string;
   @Output() editItem = new EventEmitter();
   @Output() deleteItem = new EventEmitter();
   @Output() check = new EventEmitter();
 
-  onGood = false;
+  isChecked = false;
 
-  isDeleted() {
+  deleteTask() {
     this.deleteItem.emit();
   }
 
-  isEdited() {
+  editTask() {
     this.editItem.emit();
   }
 
   checked() {
-    if (this.onGood) {
-      this.onGood = false;
+    if (this.isChecked) {
+      this.isChecked = false;
     } else {
-        this.onGood = true;
+        this.isChecked = true;
         this.check.emit();
       }
     }
