@@ -1,11 +1,11 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-itemcomp',
   templateUrl: './itemcomp.component.html',
   styleUrls: ['./itemcomp.component.scss']
 })
-export class ItemcompComponent implements OnInit {
+export class ItemcompComponent {
   @Input() item: string;
   @Output() editItem = new EventEmitter<void>();
   @Output() delItem = new EventEmitter<void>();
@@ -29,10 +29,4 @@ export class ItemcompComponent implements OnInit {
         this.checkItem.emit();
       }
     }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
