@@ -1,0 +1,19 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>My todo list</h2>
+            <button class="btn btn-primary" 
+                [disabled]="isAllowedAdding"
+                (click)="addNewTodoItem(newTask.value);">Add</button>
+            <input
+              type="text" #newTask
+              class="form-control"
+              [(ngModel)]='newTodoItem'
+              (input)="UpdateInput($event)">
+             <div *ngFor="let todoTask of todoList">
+                 <app-todo-task [todoItem]="todoTask" (isDeletedTodo)="deleteTodo(todoTask.id)" (isChangedDone)="changeDoneStatus(todoTask.id)" (isEditedTodo)="editTodo(todoTask.id, $event)"></app-todo-task>
+             </div>
+        </div>
+    </div>
+</div>

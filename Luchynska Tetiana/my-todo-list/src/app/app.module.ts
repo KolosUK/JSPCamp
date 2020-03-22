@@ -2,14 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
-import { TodoComponentComponent } from './todo-component/todo-component.component';
-import { TodoComponent } from './todo/todo.component';
+import { TodoComponent } from './todo-list/todo.component';
+import { TodoTaskComponent } from './todo-task/todo-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoComponentComponent,
-    TodoComponent
+    TodoComponent,
+    TodoTaskComponent
   ],
   imports: [
     BrowserModule,
