@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import Task from '../task';
 
 @Component({
-  selector: 'app-task-item',
-  templateUrl: './task-item.component.html',
-  styleUrls: ['./task-item.component.css']
+  selector: 'app-task-in-list',
+  templateUrl: './task-in-list.component.html',
+  styleUrls: ['./task-in-list.component.css']
 })
-export class TaskItemComponent {
+export class TaskInListComponent {
   @Input() task: Task;
   @Output() deleteItem = new EventEmitter<number>();
   isEditMode: boolean;
