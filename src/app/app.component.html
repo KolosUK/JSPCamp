@@ -7,4 +7,5 @@
 </div>
 
 <hr>
-<app-task-item *ngFor="let task of tasks" [task]='task' (deleteItem)="onDelete($event)"></app-task-item>
+<app-task-in-list *ngFor="let task of tasks" [task]='task' (deleteItem)="onDelete($event)">
+</app-task-in-list>
