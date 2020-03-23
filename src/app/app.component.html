@@ -1,4 +1,4 @@
 <app-task-to-add (createItem)="onTaskCreate($event)"></app-task-to-add>
 <hr>
-<app-task-in-list *ngFor="let task of tasks" [task]='task' (deleteItem)="onTaskDelete($event)">
-</app-task-in-list>
+<app-task-to-do *ngFor="let task of tasks" [task]='task' (deleteItem)="onTaskDelete($event)">
+</app-task-to-do>

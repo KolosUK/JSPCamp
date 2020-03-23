@@ -24,7 +24,7 @@ export class TaskToAddComponent {
     this.validateInput();
   }
 
-  onCreateButtonClick() {
+  onAddButtonClick() {
     this.validateInput();
     if (!this.isError) {
       this.createItem.emit(new Task(new Date().getTime(), this.taskName));
