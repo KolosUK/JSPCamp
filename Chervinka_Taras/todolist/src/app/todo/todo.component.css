@@ -5,7 +5,9 @@
 .btn {
   margin-left: 20px;
 }
-table, td, th {  
+table,
+td,
+th {
   border: 1px solid #ddd;
   text-align: left;
 }
@@ -20,11 +22,8 @@ th {
   font-weight: bold;
 }
 
-th, td {
+th,
+td {
   padding: 15px;
   font-size: 22px;
 }
-.inp {
-  margin-top: 15px;
-}
-
