@@ -12,10 +12,6 @@ export class TodoComponent implements OnInit {
   index: number;
   idForTask: number;
 
-
-  constructor() {
-  }
-
   ngOnInit() {
     this.idForTask = 0;
     this.taskName = '';
