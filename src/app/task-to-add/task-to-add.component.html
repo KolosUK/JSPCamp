@@ -1,1 +1,7 @@
-<p>task-in-list works!</p>
+<div class="task-to-add">
+    <label class="task-to-add__label">Add new task</label>
+    <input type="text" id="task-to-add__name" [(ngModel)]='taskName' (input)="onTaskNameChange($event.target.value)">
+    <p class="task-to-add__notification" *ngIf="isError" [ngClass]=" {'task-to-add__notification':isError}">
+        {{errorEmptyField}}</p>
+    <button class="add-button" (click)="onCreateButtonClick()" [disabled]="isError">Add</button>
+</div>

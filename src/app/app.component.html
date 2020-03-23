@@ -1,11 +1,4 @@
-<div class="task-to-add">
-    <label class="task-to-add__label">Add new task</label>
-    <input type="text" id="task-to-add__name" [(ngModel)]='taskName' (input)="onTaskNameChange($event.target.value)">
-    <p class="task-to-add__notification" *ngIf="isError" [ngClass]=" {'task-to-add__notification':isError}">
-        {{errorEmptyField}}</p>
-    <button class="add-button" (click)="onCreateButtonClick()" [disabled]="isError">Add</button>
-</div>
-
+<app-task-to-add></app-task-to-add>
 <hr>
 <app-task-in-list *ngFor="let task of tasks" [task]='task' (deleteItem)="onDelete($event)">
 </app-task-in-list>
