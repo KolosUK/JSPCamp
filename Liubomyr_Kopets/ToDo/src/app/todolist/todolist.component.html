@@ -3,15 +3,15 @@
     <label class="align"> Введіть таск</label> 
   </div> 
   <div>
-    <button class="btn btn-success" [disabled]= "!inputText" (click)="addToList()" type="button">{{isEdit ? 'Save' : 'Add'}}</button>
+    <button class="btn btn-success" [disabled]= "!inputText" (click)="addOrSaveToList()" type="button">{{ isEdit ? 'Save' : 'Add' }}</button>
   </div>
   <div>
     <input type="text" [(ngModel)]="inputText" placeholder="Введіть текст">
   </div>
   <div>
     <ul>
-      <li *ngFor="let item of itemsList; let itemIndex=index">
-       <app-itemcomp [item]="item" (editItem)="itemEdit(itemIndex)" (delItem)="itemDel(itemIndex)"(checkItem)="itemCheck(itemIndex)"></app-itemcomp> 
+      <li *ngFor="let item of itemsList; let itemIndex=index"> let todoTask=index
+       <app-listitem [item]="item" (editItem)="itemEdit(itemIndex)" (deleteItem)="itemDelete(itemIndex)"(checkItem)="itemCheck(itemIndex)"></app-listitem> 
       </li>
     </ul>
   </div>

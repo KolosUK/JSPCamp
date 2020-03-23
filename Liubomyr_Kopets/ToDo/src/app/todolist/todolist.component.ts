@@ -12,7 +12,7 @@ export class TodolistComponent {
   itemsList: string[] = [];
   isEdit = false;
   indexEdit: number;
-  addToList() {
+  addOrSaveToList() {
     if (!this.isEdit) {
       this.itemsList.push(this.inputText) ;
       this.inputText = '';
@@ -20,15 +20,14 @@ export class TodolistComponent {
     this.itemsList[this.indexEdit] = this.inputText;
     this.isEdit = false;
     this.inputText = '';
+    }
   }
-}
-
   itemEdit(index: number) {
     this.inputText = this.itemsList[index];
     this.isEdit = true;
     this.indexEdit = index;
   }
-  itemDel(index: number) {
+  itemDelete(index: number) {
     this.itemsList.splice(index, 1);
     this.itemCheck(index);
   }

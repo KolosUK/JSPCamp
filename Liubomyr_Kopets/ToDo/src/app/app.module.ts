@@ -5,13 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodolistComponent } from './todolist/todolist.component';
-import { ItemcompComponent } from './itemcomp/itemcomp.component';
+import { ListItemComponent } from './listItem/listItem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodolistComponent,
-    ItemcompComponent
+    ListItemComponent
   ],
   imports: [
     BrowserModule,
@@ -21,4 +21,4 @@ import { ItemcompComponent } from './itemcomp/itemcomp.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
