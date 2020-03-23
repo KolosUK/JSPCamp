@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import Task from '../task';
 
 @Component({
@@ -6,8 +6,8 @@ import Task from '../task';
   templateUrl: './task-to-add.component.html',
   styleUrls: ['./task-to-add.component.css']
 })
-export class TaskToAddComponent implements OnInit {
-  tasks: Task[] = new Array();
+export class TaskToAddComponent {
+  @Output() createItem = new EventEmitter<Task>();
   taskName: string;
   isError = false;
   errorEmptyField = 'You have to name your task';
@@ -21,24 +21,14 @@ export class TaskToAddComponent implements OnInit {
   }
 
   onTaskNameChange(taskName: string): void {
-    if (this.taskName) {
-      this.validateInput();
-    }
+    this.validateInput();
   }
 
   onCreateButtonClick() {
     this.validateInput();
     if (!this.isError) {
-      this.tasks.push(new Task(this.tasks.length, this.taskName));
+      this.createItem.emit(new Task(new Date().getTime(), this.taskName));
       this.taskName = '';
     }
   }
-
-  onDelete(id: number) {
-    this.tasks = this.tasks.filter(el => el.id !== id);
-  }
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
