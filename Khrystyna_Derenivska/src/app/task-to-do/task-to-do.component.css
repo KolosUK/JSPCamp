@@ -1,0 +1,70 @@
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid white;
+  margin: 10px 0 10px 0;
+}
+
+.list-item__name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tasks__list-item {
+  display: inline;
+  color: black;
+  margin: 0 0 0 10px;
+}
+
+.list-item__actions {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.list-item__checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.task__done .list-item__name {
+  text-decoration: line-through;
+}
+
+.list-item__actions--disabled {
+  display: none;
+}
+
+.button__edit {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  margin: 0 10px 0 0;
+}
+
+.button__save {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+  margin: 0 10px 0 0;
+}
+
+.button__delete {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+.button {
+  width: 60px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.button--inactive {
+  opacity: 0.3;
+}
