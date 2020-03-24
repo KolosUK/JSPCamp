@@ -6,7 +6,7 @@
       </div>
       <app-todo [inputValue]="taskName" (inputEvent)="taskName=$event"></app-todo>
       <button [disabled]="!taskName" class="btn btn-primary" (click)="addTask()">Add Task</button>
-      <table class="table">
+      <table>
         <tr>
           <th>Status</th>
           <th>#</th>
