@@ -1,0 +1,29 @@
+.completed {
+  text-decoration: line-through;
+  font-style: italic;
+}
+.btn {
+  margin-left: 20px;
+}
+table,
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 10px;
+}
+th {
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: 15px;
+  font-size: 22px;
+}
