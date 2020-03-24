@@ -19,7 +19,7 @@
           <td [ngClass]="{completed : task.completed}">{{taskIndex+1}}</td>
           <td *ngIf="!task.editing; else taskEditing" [ngClass]="{completed : task.completed}">{{task.name}}</td>
           <ng-template #taskEditing>
-            <input type="text" class="inp" [(ngModel)]='task.name' (blur)="doneEdit(task)">
+            <input type="text" [(ngModel)]='task.name' (blur)="doneEdit(task)">
           </ng-template>
           <td><button [disabled]="task.completed || task.editing" class="btn btn-danger"
               (click)="deleteTask(task.id)">Delete</button></td>
