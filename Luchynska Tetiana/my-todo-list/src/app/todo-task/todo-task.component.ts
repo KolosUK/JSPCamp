@@ -17,7 +17,7 @@ export class TodoTaskComponent {
       this.todoItem.isEditing = true;
     }
 
-    doneEdit(event: Event) {
+    finishEditing(event: Event) {
       this.isEditedTodo.emit((<HTMLInputElement>event.target).value);
       this.todoItem.isEditing = false;
     }
