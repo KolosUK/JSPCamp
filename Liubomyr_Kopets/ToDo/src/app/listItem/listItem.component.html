@@ -1,0 +1,6 @@
+<div>
+    <input type="checkbox"  (change)="checked()">
+    <span [class.text_decoration]="isCheck">{{ item }}</span>
+    <button [disabled]="isCheck" (click)="itemEdit()" class = "m-1 p-1 btn btn-primary"> Edit </button>
+    <button [disabled]="isCheck" (click)="itemDelete()" class = "m-1 p-1 btn btn-outline-primary"> Delete </button>
+</div>
