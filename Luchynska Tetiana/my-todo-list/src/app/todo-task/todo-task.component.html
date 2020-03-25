@@ -1,12 +1,12 @@
 <div class="container">
     <div class="todo-text">
-          <div class = "todo-item" *ngIf="!todoItem.isEditing; else editingTodo" [ngClass]="{doned : todoItem.isDone}">{{todoItem.label}}
+        <div *ngIf="!todoItem.isEditing; else editingTodo" [ngClass]="{doned : todoItem.isDone}">{{todoItem.label}}
           </div> 
           <ng-template #editingTodo>
             <input type="text" [(ngModel)]="todoItem.label" (keyup.enter)="finishEditing($event)">  
           </ng-template>
-      </div>
-      <div class="but">
+        </div>
+        <div>
           <button class="btn btn-primary" 
           [disabled]="todoItem.isDone"
           (click)="editTodo()">Edit</button>

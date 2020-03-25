@@ -3,7 +3,6 @@ export default class TodoItem {
     label: string;
     isDone: boolean;
     isEditing: boolean;
-  
     constructor(id: number, label: string) {
       this.id = id;
       this.label = label;

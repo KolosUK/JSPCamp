@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import TodoItem from './todoItem';
 
 @Component({
-  selector: 'app-todo',
-  templateUrl: './todo.component.html',
+  selector: 'app-todo-list',
+  templateUrl: './todo-list.component.html',
 })
 
-export class TodoComponent {
+export class TodoListComponent {
   isAllowedAdding = true;
   todoList: TodoItem[] = new Array();
   newTodoItem = '';
@@ -17,7 +17,7 @@ export class TodoComponent {
   }
 
   updateInput(event: Event) {
-    if ((<HTMLInputElement>event.target).value === '') {
+    if ((event.target as HTMLInputElement).value === '') {
       this.isAllowedAdding = true;
     } else {
       this.isAllowedAdding = false;
