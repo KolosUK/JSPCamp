@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="container">
+        <h2>Task List</h2>
+      </div>
+      <app-todo [inputValue]="taskName" (inputEvent)="taskName=$event"></app-todo>
+      <button [disabled]="!taskName" class="btn btn-primary" (click)="addTask()">Add Task</button>
+      <table>
+        <tr>
+          <th>Status</th>
+          <th>#</th>
+          <th>Name</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </tr>
+        <tr *ngFor="let task of tasks; let taskIndex=index">
+          <td><input type="checkbox" [(ngModel)]="task.completed" [disabled]="task.editing"></td>
+          <td [ngClass]="{completed : task.completed}">{{taskIndex+1}}</td>
+          <td *ngIf="!task.editing; else taskEditing" [ngClass]="{completed : task.completed}">{{task.name}}</td>
+          <ng-template #taskEditing>
+            <input type="text" [(ngModel)]='task.name' (blur)="doneEdit(task)">
+          </ng-template>
+          <td><button [disabled]="task.completed || task.editing" class="btn btn-danger"
+              (click)="deleteTask(task.id)">Delete</button></td>
+          <td><button *ngIf="!task.editing; else taskSave" [disabled]="task.completed" class="btn btn-warning"
+              (click)="editTask(task)">Edit</button>
+            <ng-template #taskSave>
+              <button class="btn btn-warning" (click)="doneEdit(task)">Save</button>
+            </ng-template>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
