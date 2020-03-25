@@ -2,10 +2,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-todocomponent',
-  templateUrl: './todocomponent.component.html',
-  styleUrls: ['./todocomponent.component.scss']
+  templateUrl: './todoitem.component.html',
+  styleUrls: ['./todoitem.component.scss']
 })
-export class TodocomponentComponent {
+export class TodoitemComponent {
   @Input() item: string;
   @Output() editItem = new EventEmitter<void>();
   @Output() deleteItem = new EventEmitter<void>();
